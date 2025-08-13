@@ -17,6 +17,7 @@ type props={
 
 function ViewReportDialog({record}:props) {
 
+console.log(record)
 
 
   return (
@@ -57,6 +58,7 @@ function ViewReportDialog({record}:props) {
             <div className=''>
                 
                     <p className='font-semibol'>
+                      {/* @ts-ignore */}
                         {record?.report?.summary ? record?.report?.summary : 'Not Specified'}
                         </p>   
             </div>
@@ -67,6 +69,7 @@ function ViewReportDialog({record}:props) {
             <div className=''>
                 
                     <p className='font-semibol flex gap-2'>
+                      {/* @ts-ignore */}
                         {record?.report?.symptoms ? record?.report?.symptoms : 'Not Specified'}
                         </p>   
             </div>
@@ -77,9 +80,11 @@ function ViewReportDialog({record}:props) {
             <div className='grid grid-cols-2 gap-2'>
                 
                     <p className='font-semibol'>
+                      {/* @ts-ignore */}
                         <span className='font-semibold'>Duration:</span> {record?.report?.duration ? record?.report?.duration : 'Not Specified'}
                         </p> 
                         <p className='font-semibol'>
+                          {/* @ts-ignore */}
                         <span className='font-semibold'>Severity:</span> {record?.report?.severity ? record?.report?.severity : 'Not Specified'}
                         </p>    
             </div>
