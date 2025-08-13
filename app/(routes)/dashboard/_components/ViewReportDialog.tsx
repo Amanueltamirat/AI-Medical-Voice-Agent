@@ -17,7 +17,7 @@ type props={
 
 function ViewReportDialog({record}:props) {
 
-console.log(record)
+console.log(record?.report?.agent ? record?.report?.agent : 'Not Specified')
 
 
   return (
@@ -39,7 +39,7 @@ console.log(record)
 
                     <h2><span className='font-semibold'>User:</span> Anonymous</h2>
                     {/* @ts-ignore */}
-                    <h2><span className='font-semibold'>Agent:</span> {record?.report?.agent || 'Not specified'}</h2>    
+                    <h2><span className='font-semibold'>Agent:</span> {record?.report?.agent ? record?.report?.agent : 'Not Specified'}</h2>    
             </div>
             </div>
 
@@ -58,7 +58,7 @@ console.log(record)
             <div className=''>
                 
                     <p className='font-semibol'>
-                        {record?.report?.summary}
+                        {record?.report?.summary ? record?.report?.summary : 'Not Specified'}
                         </p>   
             </div>
             </div>
@@ -68,7 +68,7 @@ console.log(record)
             <div className=''>
                 
                     <p className='font-semibol flex gap-2'>
-                        {record?.report?.symptoms}
+                        {record?.report?.symptoms ? record?.report?.symptoms : 'Not Specified'}
                         </p>   
             </div>
             </div>
@@ -78,10 +78,10 @@ console.log(record)
             <div className='grid grid-cols-2 gap-2'>
                 
                     <p className='font-semibol'>
-                        <span className='font-semibold'>Duration:</span> {record?.report?.duration || 'Not specified'}
+                        <span className='font-semibold'>Duration:</span> {record?.report?.duration ? record?.report?.duration : 'Not Specified'}
                         </p> 
                         <p className='font-semibol'>
-                        <span className='font-semibold'>Severity:</span> {record?.report?.severity || 'Not specified'}
+                        <span className='font-semibold'>Severity:</span> {record?.report?.severity ? record?.report?.severity : 'Not Specified'}
                         </p>    
             </div>
             </div>
