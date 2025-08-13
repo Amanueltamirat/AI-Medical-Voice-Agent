@@ -5,6 +5,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useUser } from '@clerk/nextjs';
 import { UserDeailContest } from '@/context/UserDetailContext';
+import { Loader2Icon } from 'lucide-react';
 
 export type UserDetail={
   name:string,
@@ -51,7 +52,7 @@ if (!isLoaded) {
 
 
  if (!isLoaded) {
-    return <div>Loading authentication...</div>;
+    return <div className='flex justify-center items-center h-screen'> <Loader2Icon size={100} className='animate-spin'/> </div>;
   }
   return (
     <div>
