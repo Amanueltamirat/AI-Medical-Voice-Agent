@@ -38,7 +38,7 @@ console.log(record)
                     <h2><span className='font-semibold'>Consulted On:</span> {moment(new Date(record?.createdOn)).format('MMMM Do YYYY, h:mm:ss a')}</h2>
 
                     <h2><span className='font-semibold'>User:</span> Anonymous</h2>
-
+                    {/* @ts-ignore */}
                     <h2><span className='font-semibold'>Agent:</span> {record?.report?.agent || 'Not specified'}</h2>    
             </div>
             </div>
