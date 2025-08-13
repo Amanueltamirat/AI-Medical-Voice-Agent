@@ -15,7 +15,12 @@ export type SessionDetail = {
   report:JSON,
   selectedDoctor:doctorAgent,
   createdOn:string,
-  hitoryListRecord:string
+  hitoryListRecord:string,
+  agent:string,
+  summary:string,
+  symptoms:string,
+  duration:number,
+  severity:string
  
 }
 

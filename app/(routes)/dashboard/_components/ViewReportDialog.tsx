@@ -17,7 +17,6 @@ type props={
 
 function ViewReportDialog({record}:props) {
 
-console.log(record?.report?.agent ? record?.report?.agent : 'Not Specified')
 
 
   return (
