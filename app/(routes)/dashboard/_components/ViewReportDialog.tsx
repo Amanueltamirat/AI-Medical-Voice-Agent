@@ -39,7 +39,7 @@ console.log(record)
 
                     <h2><span className='font-semibold'>User:</span> Anonymous</h2>
 
-                    <h2><span className='font-semibold'>Agent:</span> {record?.report?.agent}</h2>    
+                    <h2><span className='font-semibold'>Agent:</span> {record?.report?.agent || 'Not specified'}</h2>    
             </div>
             </div>
 
