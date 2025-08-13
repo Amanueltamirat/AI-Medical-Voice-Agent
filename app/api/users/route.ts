@@ -42,8 +42,8 @@ export async function POST(req: NextRequest) {
           name: user.primaryEmailAddressId,
           email: user.emailAddresses?.find((email)=> email.emailAddress)?.emailAddress,
          creadit: 10,   //  Note: Check if "creadit" is a typo; should it be "credit"?
-         // @ts-ignore
         })
+         // @ts-ignore
         .returning({usersTable});
       return NextResponse.json(result[0]?.usersTable);
     }
